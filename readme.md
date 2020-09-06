@@ -52,7 +52,7 @@ PowerRequestWrapper stopped: Power Lock released.
 
 B:\PowerRequestWrapper\Release>
 ```
-If you now check the power locks again, to lock is released:
+If you now check the power locks again, the lock is released:
 ```
 C:\WINDOWS\system32>powercfg -requests
 DISPLAY:
