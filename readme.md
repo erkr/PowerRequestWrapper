@@ -10,8 +10,8 @@ As a result the program will 'stall' for 30-60 seconds. Note, that happens only 
 
 ## Two usage options:
 
-* Interactivemode: call PowerRequestWrapper without a command (option -c). PowerRequestWrapper will open a pop-up dialog. The lock will be released when you close that dialog
-* Wrapper mode: call PowerRequestWrapper with a command. PowerRequestWrapper will create a process for the command. and wait till the process is clossed to release the lock.
+* **Interactive mode**: call PowerRequestWrapper without a command (no option -c). PowerRequestWrapper will open a pop-up dialog. The lock will be released when you close that dialog
+* **Wrapper mode**: call PowerRequestWrapper with a command (use option -c). PowerRequestWrapper will create a process for the command. and wait till the process is clossed to release the lock.
 When everything works as expected, an option -n can be used to run without a console window. Only do that once it is wori=king, because you don't see any messages from PowerRequestWrapper anymore
 
 
@@ -20,8 +20,11 @@ When everything works as expected, an option -n can be used to run without a con
 C:\source\repos\PowerRequestWrapper\Release>PowerRequestWrapper
 PowerRequestWrapper started: "Unlock by pressing OK in pop-up dialog".
 ```
-A pop-up dialog will be launched
-If you now can check the power locks (run in a console as administrator):
+A pop-up dialog will be launched:
+
+<img src="./dialog.png">
+
+Then check the power locks (run _powercfg -requests_ in a console as administrator):
 ```
 C:\WINDOWS\system32>powercfg -requests
 DISPLAY:
