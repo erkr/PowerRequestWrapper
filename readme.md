@@ -1,16 +1,21 @@
-PowerRequestWrapper is a tool to prevent your PC from going into Sleep mode while doing something critical.
-Of course you can temporary change your power settings, but this tool simply creates a power lock to keep the PC awake during a critical operation.
+# PowerRequestWrapper
+A tool to prevent your PC from going into Sleep mode while doing something critical.
+Of course you can temporary change your windows power settings, but you have to remember to undo this lateron.
+This tool simply creates a power lock to keep the PC awake during a critical operation (interactive, or while running a program).
 
-##One important remark. 
+## One important remark. 
 Some virus scanners (i.e. Avira) will perform a Heuristic scan the first time calling PowerRequestWrapper with command line options. 
 As a result the program will 'stall' for 30-60 seconds. Note, that happens only the first time. PowerRequestWrapper is not hanging.
 
-##Two usage options:
-Interactivemode: call PowerRequestWrapper without a command (option -c). PowerRequestWrapper will open a pop-up dialog. The lock will be released when you close that dialog
-Wrapper mode: call PowerRequestWrapper with a command. PowerRequestWrapper will create a process for the command. and wait till the process is clossed to release the lock.
+
+## Two usage options:
+
+* Interactivemode: call PowerRequestWrapper without a command (option -c). PowerRequestWrapper will open a pop-up dialog. The lock will be released when you close that dialog
+* Wrapper mode: call PowerRequestWrapper with a command. PowerRequestWrapper will create a process for the command. and wait till the process is clossed to release the lock.
 When everything works as expected, an option -n can be used to run without a console window. Only do that once it is wori=king, because you don't see any messages from PowerRequestWrapper anymore
 
-##example 1, interactive in a console window:
+
+## Example 1, interactive in a console window:
 ```
 C:\source\repos\PowerRequestWrapper\Release>PowerRequestWrapper
 PowerRequestWrapper started: "Unlock by pressing OK in pop-up dialog".
@@ -63,8 +68,9 @@ PERFBOOST:
 None.
 
 ACTIVELOCKSCREEN:
-None.```
-##example 2, wrapper mode, around newsleecher (from a shortcut):
+None.
+```
+## Example 2, wrapper mode, around newsleecher (from a shortcut):
 ```
 "C:\source\repos\PowerRequestWrapper\Release>PowerRequestWrapper.exe" -c "C:\Program Files (x86)\NewsLeecher\NewsLeecher.exe" -m "Wrapping NewsLeecher to prevent PC going into Sleep mode" -n
 ```
@@ -91,7 +97,7 @@ None.
 ACTIVELOCKSCREEN:
 None.
 ```
-##example 3, wrapper mode, around newsleecher (from a batch file):
+## Example 3, wrapper mode, around newsleecher (from a batch file):
 ```
 @echo off
 start /MIN "NewsLeecher" "C:\source\repos\PowerRequestWrapper\Release>PowerRequestWrapper.exe" -n -c "C:\Program Files (x86)\NewsLeecher\NewsLeecher.exe" -m "Wrapping NewsLeecher to prevent PC going into Sleep mode"
