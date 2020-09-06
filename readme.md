@@ -17,7 +17,7 @@ When everything works as expected, an option -n can be used to run without a con
 
 ## Example 1, interactive in a console window:
 ```
-C:\source\repos\PowerRequestWrapper\Release>PowerRequestWrapper
+B:\PowerRequestWrapper\Release>PowerRequestWrapper
 PowerRequestWrapper started: "Unlock by pressing OK in pop-up dialog".
 ```
 A pop-up dialog will be launched:
@@ -31,7 +31,7 @@ DISPLAY:
 None.
 
 SYSTEM:
-[PROCESS] \Device\HarddiskVolume5\source\repos\PowerRequestWrapper\Release\PowerRequestWrapper.exe
+[PROCESS] \Device\HarddiskVolume5\PowerRequestWrapper\Release\PowerRequestWrapper.exe
 Unlock by pressing OK in pop-up dialog
 
 AWAYMODE:
@@ -50,7 +50,7 @@ After closing the pop-up dialog:
 ```
 PowerRequestWrapper stopped: Power Lock released.
 
-C:\source\repos\PowerRequestWrapper\Release>
+B:\PowerRequestWrapper\Release>
 ```
 If you now check the power locks again, to lock is released:
 ```
@@ -75,7 +75,7 @@ None.
 ```
 ## Example 2, wrapper mode, around newsleecher (from a shortcut):
 ```
-"C:\source\repos\PowerRequestWrapper\Release>PowerRequestWrapper.exe" -c "C:\Program Files (x86)\NewsLeecher\NewsLeecher.exe" -m "Wrapping NewsLeecher to prevent PC going into Sleep mode" -n
+"B:\PowerRequestWrapper\Release>PowerRequestWrapper.exe" -c "C:\Program Files (x86)\NewsLeecher\NewsLeecher.exe" -m "Wrapping NewsLeecher to prevent PC going into Sleep mode" -n
 ```
 The -m option specifies a dedicated message, -n surpresses the console window
 If you now check the power locks:
@@ -85,7 +85,7 @@ DISPLAY:
 None.
 
 SYSTEM:
-[PROCESS] \Device\HarddiskVolume5\source\repos\PowerRequestWrapper\Release>PowerRequestWrapper.exe
+[PROCESS] \Device\HarddiskVolume5\PowerRequestWrapper\Release>PowerRequestWrapper.exe
 Wrapping NewsLeecher to prevent PC going into Sleep mode
 
 AWAYMODE:
@@ -103,6 +103,6 @@ None.
 ## Example 3, wrapper mode, around newsleecher (from a batch file):
 ```
 @echo off
-start /MIN "NewsLeecher" "C:\source\repos\PowerRequestWrapper\Release>PowerRequestWrapper.exe" -n -c "C:\Program Files (x86)\NewsLeecher\NewsLeecher.exe" -m "Wrapping NewsLeecher to prevent PC going into Sleep mode"
+start /MIN "NewsLeecher" "B:\PowerRequestWrapper\Release>PowerRequestWrapper.exe" -n -c "C:\Program Files (x86)\NewsLeecher\NewsLeecher.exe" -m "Wrapping NewsLeecher to prevent PC going into Sleep mode"
 ```
 Success.
