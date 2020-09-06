@@ -74,11 +74,12 @@ ACTIVELOCKSCREEN:
 None.
 ```
 ## Example 2, wrapper mode, around newsleecher (from a shortcut):
+NewsLeecher (v7.0 Final) is an example of a program that doen't prevent your PC to go into sleep while downloading from usenet. Using PowerRequestWrapper from a shortcut solves that. You can even change the Icon of the Shortcut to the Icon of NewsLeecher to make it feel natural. The shortcut is configured like this:
 ```
 "B:\PowerRequestWrapper\Release>PowerRequestWrapper.exe" -c "C:\Program Files (x86)\NewsLeecher\NewsLeecher.exe" -m "Wrapping NewsLeecher to prevent PC going into Sleep mode" -n
 ```
 The -m option specifies a dedicated message, -n surpresses the console window
-If you now check the power locks:
+Run the shortcut and check the power locks:
 ```
 C:\WINDOWS\system32>powercfg -requests
 DISPLAY:
