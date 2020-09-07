@@ -9,10 +9,11 @@ As a result the program will 'stall' for 30-60 seconds. Note, that happens only 
 
 
 ## Two usage options:
-
+Calling syntax ```Usage: %s [-c commandline] [-m message] [-n]```
 * **Interactive mode**: call PowerRequestWrapper without a command (no option -c). PowerRequestWrapper will open a pop-up dialog. The lock will be released when you close that dialog
-* **Wrapper mode**: call PowerRequestWrapper with a command (use option -c). PowerRequestWrapper will create a process for the command, and wait till the process is clossed to release the lock.
-When everything works as expected, an option -n can be used to run without a console window. Only do that once it is working properly, because you don't see any messages from PowerRequestWrapper anymore.
+* **Wrapper mode**: call PowerRequestWrapper with a command (use option -c). PowerRequestWrapper will create a process for the command, and wait till the process is closed, in order to release the lock.
+
+When everything works as expected, an option -n can be used to run without a console window. Only use -n once it is working properly, because you don't see any messages from PowerRequestWrapper anymore. The -m option allows to specify your own message (visibe when checking the power configuration with _powercfg -requests_ in a console).
 
 
 ## Example 1, interactive in a console window:
@@ -52,7 +53,7 @@ PowerRequestWrapper stopped: Power Lock released.
 
 B:\PowerRequestWrapper\Release>
 ```
-If you now check the power locks again, the lock is released:
+If you now check the power locks, the lock is released:
 ```
 C:\WINDOWS\system32>powercfg -requests
 DISPLAY:
@@ -78,7 +79,11 @@ NewsLeecher (v7.0 Final) is an example of a program that doen't prevent your PC 
 ```
 "B:\PowerRequestWrapper\Release>PowerRequestWrapper.exe" -c "C:\Program Files (x86)\NewsLeecher\NewsLeecher.exe" -m "Wrapping NewsLeecher to prevent PC going into Sleep mode" -n
 ```
-The -m option specifies a dedicated message, -n surpresses the console window
+The options:
+* -c option is a command to start as a process 
+* -m option specifies a dedicated message
+* -n surpresses the console window
+
 Run the shortcut and check the power locks:
 ```
 C:\WINDOWS\system32>powercfg -requests
