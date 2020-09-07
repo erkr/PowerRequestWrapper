@@ -111,4 +111,6 @@ None.
 @echo off
 start /MIN "NewsLeecher" "B:\PowerRequestWrapper\Release>PowerRequestWrapper.exe" -n -c "C:\Program Files (x86)\NewsLeecher\NewsLeecher.exe" -m "Wrapping NewsLeecher to prevent PC going into Sleep mode"
 ```
+The code was compiled, using VS2019 Version 16.6.2
+
 Success.
