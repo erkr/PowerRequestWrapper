@@ -5,7 +5,7 @@ body:
     attributes:
       value: |
         This issue form is for reporting bugs only!
-        For questions read our [FAQ section][fq] or visit our Community Forum on [Discord][cf].
+        For questions read our [FAQ section][fq] or visit our community on [Discord][cf].
         If you have a feature or enhancement request, please enter them in our discussions section [feature request][fr] 
  
         [fq]: https://github.com/music-assistant/hass-music-assistant/discussions/categories/q-a-faq
