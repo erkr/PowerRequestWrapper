@@ -9,7 +9,7 @@ body:
         If you have a feature or enhancement request, please enter them in our discussions section [feature request][fr] 
  
         [fq]: https://github.com/music-assistant/hass-music-assistant/discussions/categories/q-a-faq
-        [cf]: https://discord.gg/kaVm8hGpne
+        [cf]: https://discord.com/channels/753947050995089438/753947050995089442
         [fr]: https://github.com/music-assistant/hass-music-assistant/discussions/categories/feature-requests-and-ideas
   - type: input
     id: version_MA
