@@ -40,13 +40,13 @@ body:
     id: logs
     attributes:
       label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
+      description: |
+        Please copy and paste any relevant log output. Use the field below.
   - type: textarea
     attributes:
       label: Additional information
       description: |
-        If you have any additional information for us, use the field below.
+        If you have any additional information for us. Use the field below.
   - type: markdown
     attributes:
       value: |
