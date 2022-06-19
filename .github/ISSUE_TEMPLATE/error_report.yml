@@ -57,7 +57,7 @@ body:
       required: true
     attributes:
       label: What version of Home Assistant Core are your running
-      placeholder: core-
+      placeholder: core-2022.5.4
       description: |
         Can be found in: [Settings -> About](https://my.home-assistant.io/redirect/info/).
         For example: core-2022.5.4
