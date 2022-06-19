@@ -12,7 +12,7 @@ body:
         [cf]: https://discord.gg/kaVm8hGpne
         [fr]: https://github.com/music-assistant/hass-music-assistant/discussions/categories/feature-requests-and-ideas
   - type: input
-    id: version
+    id: version MA
     validations:
       required: true
     attributes:
@@ -52,7 +52,7 @@ body:
       value: |
         ## Environment
   - type: input
-    id: version
+    id: version HA
     validations:
       required: true
     attributes:
